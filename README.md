@@ -14,18 +14,20 @@ https://www.anaconda.com/download/<br>
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal<br>
 打开命令提示符输入一下命令<br>
 python -m pip install GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl<br>
+检测是否安装成功：<br>
+打开命令行，输入python，进入python运行环境，输入import gdal，不报错，表示安装成功。<br>
 
 #### 1.3 MRT（MODIS Reprojection Tool）安装
 链接：https://pan.baidu.com/s/1ANu9xt6C_aRGRzI7HMyIpA 提取码：chbe <br>
 由于安装MRT需要Java环境，首先需要安装Java，下载路径如下：<br>
 https://www.java.com/zh_CN/download/manual.jsp<br>
 Java安装并配置好环境变量后，解压双击mrt_install.bat进行安装，按照提示进行。<br>
+检测是否安装成功:<br>
+MRT安装路径下.\bin，双击ModisTool.bat，出现MRT处理界面，表示成功。<br>
 
-#### 1.4 cuda与cudnn安装
-首先检查计算机显卡型号，是否支持cuda，支持哪个cuda版本，然后下载对应版本的cuda，默认安装。Cuda下载路径如下<br>
+#### 1.4 cuda安装
+首先检查计算机显卡型号，是否支持cuda，支持哪个cuda版本，然后下载对应版本的cuda，默认安装。Cuda下载路径如下:<br>
 https://developer.nvidia.com/cuda-downloads<br>
 可参考官方文档https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html<br>
-最后下载cuda版本对应的cudnn，下载之后解压缩，将.h .lib 和.dll 文件分别拷贝到cuda安装路径下的include, lib/x64, bin 文件夹下。<br>
-cudnn下载路径如下：<br>
-https://developer.nvidia.com/cudnn<br>
-参考官方文档https://docs.nvidia.com/deeplearning/sdk/cudnn-install/#install-windows<br>
+检测是否安装成功:<br>
+以管理员模式打开cmd，输入nvcc -V，出现版本信息表示安装成功。<br>
