@@ -33,7 +33,7 @@ https://developer.nvidia.com/cuda-downloads<br>
 以管理员模式打开cmd，输入nvcc -V，出现版本信息表示安装成功。<br>
 
 ## 程序运行方式
-各个参数含义查看帮助文档或者打开cmd分别运行python STDFA.py --help，python STARFM.py --help，python CDSTARFM.py --help
-STDFA：修改必要参数后运行STDFA.bat
-STDFA：修改必要参数后运行STARFM.bat
-STDFA：修改必要参数后运行CDSTARFM.bat
+各个参数含义查看帮助文档或者打开cmd分别运行python STDFA.py --help，python STARFM.py --help，python CDSTARFM.py --help<br>
+STDFA：修改必要参数后运行STDFA.bat<br>
+STDFA：修改必要参数后运行STARFM.bat<br>
+STDFA：修改必要参数后运行CDSTARFM.bat<br>
