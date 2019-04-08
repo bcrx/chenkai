@@ -33,7 +33,15 @@ https://developer.nvidia.com/cuda-downloads<br>
 以管理员模式打开cmd，输入nvcc -V，出现版本信息表示安装成功。<br>
 
 ## 程序运行方式
+
+### 输入数据要求
+Landsat输入数据要求：Landsat5,7,8标准数据集<br>
+MODIS输入数据要求：MODGQ09标准数据集<br>
+
+### 参数含义
 各个参数含义查看帮助文档或者打开cmd分别运行python STDFA.py --help，python STARFM.py --help，python CDSTARFM.py --help<br>
+
+### 程序运行
 STDFA：修改必要参数后运行STDFA.bat<br>
 STDFA：修改必要参数后运行STARFM.bat<br>
 STDFA：修改必要参数后运行CDSTARFM.bat<br>
