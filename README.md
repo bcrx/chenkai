@@ -45,4 +45,4 @@ MODIS输入数据要求：MODGQ09标准数据集<br>
 STDFA：修改参数后运行STDFA.bat<br>
 STDFA：修改参数后运行STARFM.bat<br>
 STDFA：修改参数后运行CDSTARFM.bat<br>
-说明：修改参数为帮助文档中的必选参数<br>
+说明：修改帮助文档中的必选参数<br>
