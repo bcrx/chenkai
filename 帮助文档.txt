@@ -1,0 +1,53 @@
+STDFA模型各参数含义
+--root：根路径，必选
+--landsat_t1_path：landsat初期影像解压缩后文件夹路径，必选
+--landsat_t2_path：landsat初期影像解压缩后文件夹路径，必选
+--modis_path：MODIS影像文件夹路径,必选
+--MRT_save_path：MODIS转投影、裁剪与重采样后保存路径，必选
+--save_path：合成影像保存路径，必选
+--java_path：Java安装路径，例如C:\Program Files\Java\jre1.8.0_144，必选
+--MRT_path：MRT安装路径，例如D:\Program Files\MRT，必选
+--landsat_ID：Landsat卫星型号，可选5,7,8，必选
+--band_number：波段选择，Landsat5和7可选3,4，3为红波段，4为近红外波段，Landsat8可选4,5，4为红波段，5为近红外波段,，必选
+--zhouqi'：Landsat间隔周期，可选，默认16
+--landsat_resolusion：Landsat分辨率，可选，默认30
+--modis_resolusion：MODIS重采样分辨率，可选，默认240
+--windows_size：窗口大小，可选，默认15
+--class_count：分类数，可选，默认10
+--max_iter：最大迭代数，可选，默认10
+--block_size：影像分块大小，可选，默认512
+
+STARFM模型各参数含义
+--root：根路径，必选
+--landsat_t1_path：landsat初期影像解压缩后文件夹路径，必选
+--modis_path：MODIS影像文件夹路径,必选
+--MRT_save_path：MODIS转投影、裁剪与重采样后保存路径，必选
+--save_path：合成影像保存路径，必选
+--java_path：Java安装路径，例如C:\Program Files\Java\jre1.8.0_144，必选
+--MRT_path：MRT安装路径，例如D:\Program Files\MRT，必选
+--landsat_ID：Landsat卫星型号，可选5,7,8，必选
+--band_number：波段选择，Landsat5和7可选3,4，3为红波段，4为近红外波段，Landsat8可选4,5，4为红波段，5为近红外波段,，必选
+--zhouqi：Landsat间隔周期，可选，默认16
+--landsat_resolusion：Landsat分辨率，可选，默认30
+--modis_resolusion：MODIS重采样分辨率，可选，默认240
+--windows_size'：窗口大小，可选，默认15
+--block_size'：影像分块大小，可选，默认512、
+
+CDSTARFM模型各参数含义
+--root：根路径，必选
+--landsat_t1_path：landsat初期影像解压缩后文件夹路径，必选
+--modis_path：MODIS影像文件夹路径,必选
+--MRT_save_path：MODIS转投影、裁剪与重采样后保存路径，必选
+--save_path：合成影像保存路径，必选
+--java_path：Java安装路径，例如C:\Program Files\Java\jre1.8.0_144，必选
+--MRT_path：MRT安装路径，例如D:\Program Files\MRT，必选
+--classimage_path：分类影像保存路径，例如D:\class_ST.tif，必选
+--landsat_ID：Landsat卫星型号，可选5,7,8，必选
+--band_number：波段选择，Landsat5和7可选3,4，3为红波段，4为近红外波段，Landsat8可选4,5，4为红波段，5为近红外波段,，必选
+--zhouqi：Landsat间隔周期，可选，默认16
+--landsat_resolusion：Landsat分辨率，可选，默认30
+--modis_resolusion：MODIS重采样分辨率，可选，默认240
+--windows_size：窗口大小，可选，默认15
+--class_count：分类数，可选，默认10
+--max_iter：最大迭代数，可选，默认10
+--block_size：影像分块大小，可选，默认512
