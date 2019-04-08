@@ -31,3 +31,5 @@ https://developer.nvidia.com/cuda-downloads<br>
 可参考官方文档https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html<br>
 检测是否安装成功:<br>
 以管理员模式打开cmd，输入nvcc -V，出现版本信息表示安装成功。<br>
+
+## 程序运行方式
