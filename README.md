@@ -46,3 +46,10 @@ STDFA：修改参数后运行STDFA.bat<br>
 STDFA：修改参数后运行STARFM.bat<br>
 STDFA：修改参数后运行CDSTARFM.bat<br>
 说明：修改帮助文档中的必选参数<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+备注：作者联系方式：271083072@qq.com
