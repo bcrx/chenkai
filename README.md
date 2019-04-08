@@ -6,7 +6,26 @@ Version 1.0
 
 ### 1、windows10下环境部署步骤
 #### 1.1 Python安装
-建议安装Anaconda，默认安装，全英文路径。
-anaconda下载网址https://www.anaconda.com/download/
+建议安装Anaconda，默认安装，全英文路径。anaconda下载网址如下：
+https://www.anaconda.com/download/
 
-#### 1.2 GDAL
+#### 1.2 GDAL安装
+下载Python对应版本的gdal安装文件，比如GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl。下载地址如下：
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal
+打开命令提示符输入一下命令
+python -m pip install GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl
+
+#### 1.3 MRT（MODIS Reprojection Tool）安装
+链接：https://pan.baidu.com/s/1ANu9xt6C_aRGRzI7HMyIpA 提取码：chbe 
+由于安装MRT需要Java环境，首先需要安装Java，下载路径如下：
+https://www.java.com/zh_CN/download/manual.jsp
+Java安装并配置好环境变量后，解压双击mrt_install.bat进行安装，按照提示进行。
+
+#### 1.4 cuda与cudnn安装
+首先检查计算机显卡型号，是否支持cuda，支持哪个cuda版本，然后下载对应版本的cuda，默认安装。Cuda下载路径如下
+https://developer.nvidia.com/cuda-downloads
+可参考官方文档https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html
+最后下载cuda版本对应的cudnn，下载之后解压缩，将.h .lib 和.dll 文件分别拷贝到cuda安装路径下的include, lib/x64, bin 文件夹下。
+cudnn下载路径如下：
+https://developer.nvidia.com/cudnn
+参考官方文档https://docs.nvidia.com/deeplearning/sdk/cudnn-install/#install-windows
