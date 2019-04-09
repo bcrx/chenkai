@@ -1,5 +1,5 @@
 # 基于CPU-GPU异构混合编程的遥感数据时空融合程序，包括STDFA，STARFM，CDSTARFM三种模型
-Version 1.0
+Version 2.0
 
 ## 上手指南
 以下指南将帮助你在本地机器上安装和运行该项目，进行开发和测试。关于如何将该项目部署到在线环境，请参考部署小节。<br>
@@ -32,11 +32,21 @@ https://developer.nvidia.com/cuda-downloads<br>
 检测是否安装成功:<br>
 以管理员模式打开cmd，输入nvcc -V，出现版本信息表示安装成功。<br>
 
+#### 1.5 pycuda安装
+首先pycuda需要VS编译环境的支撑，安装pycuda之前请确定VS已安装成功。
+其次安装必要的环境，使用命令提示符，代码如下：<br>
+conda install mingw libpython<br>
+最后安装pycuda，pycuda下载地址如下：<br>
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycuda<br>
+
+
 ## 程序运行方式
 
 ### 输入数据要求
 Landsat输入数据要求：Landsat5,7,8标准数据集<br>
 MODIS输入数据要求：MODGQ09标准数据集<br>
+示例数据下载网址：正在上传<br>
+
 
 ### 参数含义
 各个参数含义查看帮助文档或者打开cmd分别运行python STDFA.py --help，python STARFM.py --help，python CDSTARFM.py --help<br>
