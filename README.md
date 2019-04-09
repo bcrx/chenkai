@@ -59,14 +59,18 @@ MODIS输入数据要求：MODGQ09标准数据集<br>
 各个参数含义查看帮助文档或者打开cmd分别运行python STDFA.py --help，python STARFM.py --help，python CDSTARFM.py --help<br>
 `
 python STDFA.py --help
-python STARFM.py --help
-python CDSTARFM.py --help
+`<br>
 `
+python STARFM.py --help
+`<br>
+`
+python CDSTARFM.py --help
+`<br>
 
 ### 程序运行
 STDFA：修改参数后运行STDFA.bat<br>
-STDFA：修改参数后运行STARFM.bat<br>
-STDFA：修改参数后运行CDSTARFM.bat<br>
+STARFM：修改参数后运行STARFM.bat<br>
+CDSTARFM：修改参数后运行CDSTARFM.bat<br>
 说明：以文本模式修改bat文件内的参数，各个参数用处与修改方式参考帮助文档<br>
 <br>
 <br>
