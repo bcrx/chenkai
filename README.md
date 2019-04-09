@@ -35,6 +35,7 @@ https://developer.nvidia.com/cuda-downloads<br>
 #### 1.5 pycuda安装
 首先pycuda需要VS编译环境的支撑，安装pycuda之前请确定VS已安装成功。
 其次安装必要的环境，使用命令提示符，代码如下：<br>
+<table><tr><td bgcolor=#282c34>conda install mingw libpython</td></tr></table>
 conda install mingw libpython<br>
 最后安装pycuda，pycuda下载地址如下：<br>
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycuda<br>
