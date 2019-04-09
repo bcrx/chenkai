@@ -13,7 +13,7 @@ https://www.anaconda.com/download/<br>
 下载Python对应版本的gdal安装文件，比如GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl。下载地址如下：<br>
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal<br>
 打开命令提示符输入一下命令<br>
-`cmd
+`
 python -m pip install GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl
 `<br>
 检测是否安装成功：<br>
@@ -33,14 +33,14 @@ https://developer.nvidia.com/cuda-downloads<br>
 可参考官方文档https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html<br>
 检测是否安装成功:<br>
 以管理员模式打开cmd，输入nvcc -V，出现版本信息表示安装成功。<br>
-`cmd
+`
 nvcc -V
 `
 
 #### 1.5 pycuda安装
 首先pycuda需要VS编译环境的支撑，安装pycuda之前请确定VS已安装成功。
 其次安装必要的环境，使用命令提示符，代码如下：<br>
-`cmd
+`
 conda install mingw libpython
 `<br>
 最后安装pycuda，pycuda下载地址如下：<br>
@@ -57,7 +57,7 @@ MODIS输入数据要求：MODGQ09标准数据集<br>
 
 ### 参数含义
 各个参数含义查看帮助文档或者打开cmd分别运行python STDFA.py --help，python STARFM.py --help，python CDSTARFM.py --help<br>
-`cmd
+`
 python STDFA.py --help
 python STARFM.py --help
 python CDSTARFM.py --help
@@ -67,7 +67,7 @@ python CDSTARFM.py --help
 STDFA：修改参数后运行STDFA.bat<br>
 STDFA：修改参数后运行STARFM.bat<br>
 STDFA：修改参数后运行CDSTARFM.bat<br>
-说明：修改帮助文档中的必选参数<br>
+说明：以文本模式修改bat文件内的参数，各个参数用处与修改方式参考帮助文档<br>
 <br>
 <br>
 <br>
