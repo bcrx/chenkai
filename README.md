@@ -13,7 +13,9 @@ https://www.anaconda.com/download/<br>
 下载Python对应版本的gdal安装文件，比如GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl。下载地址如下：<br>
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal<br>
 打开命令提示符输入一下命令<br>
-python -m pip install GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl<br>
+`cmd
+python -m pip install GDAL‑2.4.1‑cp36‑cp36m‑win_amd64.whl
+`<br>
 检测是否安装成功：<br>
 打开命令行，输入python，进入python运行环境，输入import gdal，不报错，表示安装成功。<br>
 
@@ -31,6 +33,9 @@ https://developer.nvidia.com/cuda-downloads<br>
 可参考官方文档https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html<br>
 检测是否安装成功:<br>
 以管理员模式打开cmd，输入nvcc -V，出现版本信息表示安装成功。<br>
+`cmd
+nvcc -V
+`
 
 #### 1.5 pycuda安装
 首先pycuda需要VS编译环境的支撑，安装pycuda之前请确定VS已安装成功。
@@ -52,6 +57,11 @@ MODIS输入数据要求：MODGQ09标准数据集<br>
 
 ### 参数含义
 各个参数含义查看帮助文档或者打开cmd分别运行python STDFA.py --help，python STARFM.py --help，python CDSTARFM.py --help<br>
+`cmd
+python STDFA.py --help
+python STARFM.py --help
+python CDSTARFM.py --help
+`
 
 ### 程序运行
 STDFA：修改参数后运行STDFA.bat<br>
