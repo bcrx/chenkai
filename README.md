@@ -52,7 +52,8 @@ https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycuda<br>
 ### 输入数据要求
 Landsat输入数据要求：Landsat5,7,8标准数据集<br>
 MODIS输入数据要求：MODGQ09标准数据集<br>
-示例数据下载网址：正在上传<br>
+示例数据下载链接：https://pan.baidu.com/s/1vLuoBi7CnlN9nV_j54Y3hg<br>
+提取码：v01u<br>
 
 
 ### 参数含义
