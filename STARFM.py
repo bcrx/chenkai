@@ -813,7 +813,7 @@ OUTPUT_PIXEL_SIZE = %d\n\
 
 
     #影像融合,参数：分类数，path依次表示landsat期初影像，landsat期末影像，时序的modis影像,band_number为第几波段,batch 是否批处理
-    def fusion(self,landsat_t1_path,MRT_save_path,modis_path_list,save_path,java_path,MRT_path,zhouqi = 16,landsat_resolusion = 30,modis_resolusion = 240,landsat_ID=5,windows_size = 7,block_size = 512,batch = False):
+    def fusion(self,landsat_t1_path,MRT_save_path,modis_path_list,save_path,java_path,MRT_path,block_size = 512,zhouqi = 16,landsat_resolusion = 30,modis_resolusion = 240,landsat_ID=5,windows_size = 7,batch = False):
         if(batch):
             #设置根目录
             os.chdir(self.root)
@@ -1024,7 +1024,7 @@ OUTPUT_PIXEL_SIZE = %d\n\
                      
                     #拼接,去除重叠部分，中间部分去掉边缘三个像素
                     print('融合时间：',time.time()-fusion_time)
-                    new_landsat = numpy.zeros((block_size,0)) #初始化空白矩阵
+                    new_landsat = numpy.zeros((block_size-1,0)) #初始化空白矩阵
                     block_landsat_new = [new_landsat for i in range(b_m)] #初始化横向拼接矩阵，储存横向拼接后影像，大小匹配
                     block_landsat_new[b_m-1] = numpy.zeros((block_landsat[b_m-1][0].shape[0],0))
                     for bi in range(b_m):            
@@ -1075,7 +1075,7 @@ for each in modis_list:
 fusion = Fusion(args.root,band_number = args.band_number,window_size = args.windows_size)
 time2 = time.time()
 batch = False
-fusion.fusion(args.landsat_t1_path,args.MRT_save_path,modis_path_list,args.save_path,args.java_path,args.MRT_path,args.zhouqi,args.landsat_resolusion,args.modis_resolusion,args.landsat_ID,args.block_size,batch)
+fusion.fusion(args.landsat_t1_path,args.MRT_save_path,modis_path_list,args.save_path,args.java_path,args.MRT_path,args.block_size,args.zhouqi,args.landsat_resolusion,args.modis_resolusion,args.landsat_ID,batch)
 print('融合所用时间：%0.2f'%(time.time()-time2))
 
 
