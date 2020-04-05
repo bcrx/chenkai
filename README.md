@@ -75,6 +75,7 @@ CDSTARFM：修改参数后运行CDSTARFM.bat<br>
 说明：以文本模式修改bat文件内的参数，各个参数用处与修改方式参考帮助文档<br>
 <br>
 <br>
+修改STARFM程序无法融合bug
 <br>
 <br>
 <br>
