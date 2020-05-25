@@ -1075,7 +1075,7 @@ for each in modis_list:
 fusion = Fusion(args.root,band_number = args.band_number,window_size = args.windows_size)
 time2 = time.time()
 batch = False
-fusion.fusion(args.landsat_t1_path,args.MRT_save_path,modis_path_list,args.save_path,args.java_path,args.MRT_path,args.zhouqi,args.landsat_resolusion,args.modis_resolusion,args.landsat_ID,args.block_size,batch)
+fusion.fusion(args.landsat_t1_path,args.MRT_save_path,modis_path_list,args.save_path,args.java_path,args.MRT_path,args.zhouqi,args.landsat_resolusion,args.modis_resolusion,args.landsat_ID,args.windows_size,args.block_size,batch)
 print('融合所用时间：%0.2f'%(time.time()-time2))
 
 
