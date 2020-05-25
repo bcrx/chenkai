@@ -884,8 +884,8 @@ OUTPUT_PIXEL_SIZE = %d\n\
             list_dir = os.listdir()
             #读取期初landsat影像对应时间的modis影像
             for each in list_dir:
-                if(str(time1_year)+str(time1_day) in each and 'sur_refl_b0%d'%modis_band_number in each and 'tif' == each[-3:].lower()):
-                    print('读取%d时刻的modis影像%s'%(time1_day,each))
+                if(str(time1_year)+'%03d'%time1_day in each and 'sur_refl_b0%d'%modis_band_number in each and 'tif' == each[-3:].lower()):
+                    print('读取%03d时刻的modis影像%s'%(time1_day,each))
                     time1_modis_image = self.read_image(each)
                     time1_modis_data = self.read_data(time1_modis_image,1)
                     #modis重采样为landsat大小,转换为Image类型重采样
@@ -915,7 +915,7 @@ OUTPUT_PIXEL_SIZE = %d\n\
                 
                 os.chdir(MRT_save_path)
                 landsat_reflectance = numpy.zeros((m,n))
-                print('读取%d到%d时间内的modis影像'%(time1_day,time2_day))
+                print('读取%03d到%03d时间内的modis影像'%(time1_day,time2_day))
                 try:
                     modis_time2 = each[9:16]
                     modis_time2_year = int(modis_time2[0:4])
@@ -927,7 +927,7 @@ OUTPUT_PIXEL_SIZE = %d\n\
                         else:
                             modis_time2_day = modis_time2_day+366
                         
-                    print('modis成像时间:',str(modis_time2_year)+str(modis_time2_day))
+                    print('modis成像时间:',str(modis_time2_year)+"%03d"%(modis_time2_day))
                 except:
                     print("出错")
                     continue
@@ -1075,7 +1075,7 @@ for each in modis_list:
 fusion = Fusion(args.root,band_number = args.band_number,window_size = args.windows_size)
 time2 = time.time()
 batch = False
-fusion.fusion(args.landsat_t1_path,args.MRT_save_path,modis_path_list,args.save_path,args.java_path,args.MRT_path,args.zhouqi,args.landsat_resolusion,args.modis_resolusion,args.landsat_ID,args.windows_size,args.block_size,batch)
+fusion.fusion(args.landsat_t1_path,args.MRT_save_path,modis_path_list,args.save_path,args.java_path,args.MRT_path,args.zhouqi,args.landsat_resolusion,args.modis_resolusion,args.landsat_ID,args.block_size,batch)
 print('融合所用时间：%0.2f'%(time.time()-time2))
 
 

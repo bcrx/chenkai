@@ -1127,11 +1127,11 @@ OUTPUT_PIXEL_SIZE = %d\n\
             list_dir = os.listdir()
             #读取期初landsat影像对应时间的modis影像
             for each in list_dir:
-                if(str(time1_year)+str(time1_day) in each and 'sur_refl_b0%d'%modis_band_number in each and 'tif' == each[-3:].lower()):
-                    print('读取%d时刻的modis影像%s'%(time1_day,each))
+                if(str(time1_year)+'%03d'%time1_day in each and 'sur_refl_b0%d'%modis_band_number in each and 'tif' == each[-3:].lower()):
+                    print('读取%03d时刻的modis影像%s'%(time1_day,each))
                     time1_modis_image = self.read_image(each)
                     time1_modis_reflectance = (self.read_data(time1_modis_image,1))/10000
-                    print('正在计算%d时刻的类别平均反射率'%time1_day)
+                    print('正在计算%03d时刻的类别平均反射率'%time1_day)
                             
                     time1_class_mean_reflectance = self.least_squares(abundance_image,time1_modis_reflectance)
                     if(not time1_class_mean_reflectance.any()):
@@ -1161,7 +1161,7 @@ OUTPUT_PIXEL_SIZE = %d\n\
                 
                 os.chdir(MRT_save_path)
                 landsat_reflectance = numpy.zeros((m,n))
-                print('读取%d到%d时间内的modis影像'%(time1_day,time2_day))
+                print('读取%03d到%03d时间内的modis影像'%(time1_day,time2_day))
                 try:
                     modis_time2 = each[9:16]
                     modis_time2_year = int(modis_time2[0:4])
@@ -1173,7 +1173,7 @@ OUTPUT_PIXEL_SIZE = %d\n\
                         else:
                             modis_time2_day = modis_time2_day+366
                         
-                    print('modis成像时间:',str(modis_time2_year)+str(modis_time2_day))
+                    print('modis成像时间:',str(modis_time2_year)+"%03d"%(modis_time2_day))
                 except:
                     print("出错")
                     continue
